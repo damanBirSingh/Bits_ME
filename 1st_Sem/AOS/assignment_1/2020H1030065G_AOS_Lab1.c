@@ -1,3 +1,5 @@
+/* To Compile c code using pthread library use -pthread option with gcc */
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<pthread.h>

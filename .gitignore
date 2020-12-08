@@ -1,0 +1,9 @@
+#Ignore all .o & .out files
+**/*.o
+**/*.out
+
+#Ignore ctags file
+tags
+
+#Ignore test folder wherever present
+**/test/
