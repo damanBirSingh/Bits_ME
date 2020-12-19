@@ -49,6 +49,11 @@ int main(int argc, char *argv[]){
         pthread_join(thread_id[i], NULL);   
     
     print_output(row);
+    fclose(fpointer);
+    free(fpointer);
+    free(fileName);
+    free(thread_data_array);
+    free(thread_id);
     return 0;
 }
 
