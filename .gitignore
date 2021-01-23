@@ -8,5 +8,11 @@ tags
 #Ignore test folder wherever present
 **/test/
 
+#Ignore build folder
+**/build/
+
+#Ignore vscode folder
+**/.vscode/
+
 #Ignore the jupyter lab checkpoint files
 **/*.ipynb_checkpoints/
