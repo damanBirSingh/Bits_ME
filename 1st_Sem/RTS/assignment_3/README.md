@@ -2,7 +2,6 @@
 Assigned: 17th Jan
 Due Date: 24th Jan 23:59
 
-What you have to submit  per task set
+See problem Set for details.
 
-
-Submitted: 
+Submitted: 24th Jan 23:40
