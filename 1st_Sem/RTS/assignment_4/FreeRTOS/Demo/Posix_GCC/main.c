@@ -66,8 +66,9 @@
 #define    BLINKY_DEMO       0
 #define    FULL_DEMO         1
 #define    HELLO_WORLD       2
+#define    SIMPLE_TASK_SCHED    3
 
-#define mainSELECTED_APPLICATION HELLO_WORLD
+#define mainSELECTED_APPLICATION SIMPLE_TASK_SCHED
 
 /* This demo uses heap_3.c (the libc provided malloc() and free()). */
 
@@ -152,6 +153,11 @@ int main( void )
     {
         console_print("Starting hello world\n");
         hello_world();
+    }
+    #elif ( mainSELECTED_APPLICATION == SIMPLE_TASK_SCHED)
+    {
+        console_print("Starting Simple task Scheduler\n");
+        simple_task_sched();
     }
     #else
     {

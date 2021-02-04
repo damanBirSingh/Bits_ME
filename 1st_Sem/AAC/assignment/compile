@@ -1,0 +1,10 @@
+#!/bin/bash 
+
+g++ -c ./subsetSum_Analysis.cpp
+g++ -c ./subsetSum_DynamicProg.cpp
+g++ -c ./subsetSum_Backtracking.cpp
+g++ -c ./subsetSum_Recursive.cpp
+g++ -c ./randomArray.cpp 
+g++ -o subsetSum_Analysis subsetSum_Analysis.o subsetSum_DynamicProg.o subsetSum_Backtracking.o subsetSum_Recursive.o randomArray.o
+./subsetSum_Analysis
+python plotGraph.py
