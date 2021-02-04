@@ -2,7 +2,7 @@ import java.rmi.Remote;
 import java.rmi.RemoteException; 
 import java.util.*;
 
-// Creating Remote interface for our application 
+// Remote interface 
 public interface Hello extends Remote {  
-   public List<Student> getStudents() throws Exception;  
+    public List<Student> getStudents() throws Exception;  
 }
