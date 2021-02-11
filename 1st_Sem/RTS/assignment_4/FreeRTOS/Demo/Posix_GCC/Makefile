@@ -15,11 +15,12 @@ INCLUDE_DIRS += -I${FREERTOS_DIR}/Source/portable/ThirdParty/GCC/Posix
 INCLUDE_DIRS += -I${FREERTOS_DIR}/Source/portable/ThirdParty/GCC/Posix/utils
 INCLUDE_DIRS += -I${FREERTOS_DIR}/Demo/Common/include
 INCLUDE_DIRS += -I${FREERTOS_PLUS_DIR}/Source/FreeRTOS-Plus-Trace/Include
+INCLUDE_DIRS += -I${FREERTOS_DIR}/Demo/Posix_GCC/assignment
 
 SOURCE_FILES := $(wildcard *.c)
-SOURCE_FILES += $(wildcard ./practice/*.c)
-SOURCE_FILES += $(wildcard ./assignment/*.c)
 SOURCE_FILES += $(wildcard ${FREERTOS_DIR}/Source/*.c)
+SOURCE_FILES += $(wildcard ${FREERTOS_DIR}/Demo/Posix_GCC/assignment/*.c)
+SOURCE_FILES += $(wildcard ${FREERTOS_DIR}/Demo/Posix_GCC/practice/*.c)
 # Memory manager (use malloc() / free() )
 SOURCE_FILES += ${FREERTOS_DIR}/Source/portable/MemMang/heap_3.c
 # posix port

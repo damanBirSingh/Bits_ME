@@ -66,9 +66,10 @@
 #define    BLINKY_DEMO       0
 #define    FULL_DEMO         1
 #define    HELLO_WORLD       2
-#define    SIMPLE_TASK_SCHED    3
+#define    SIMPLE_TASK_SCHED 3
+#define    EDF_TASK_SCHED    4
 
-#define mainSELECTED_APPLICATION SIMPLE_TASK_SCHED
+#define mainSELECTED_APPLICATION EDF_TASK_SCHED
 
 /* This demo uses heap_3.c (the libc provided malloc() and free()). */
 
@@ -78,6 +79,7 @@ extern void main_full( void );
 extern void main_tcp_echo_client_tasks( void );
 static void traceOnEnter( void );
 static void hello_world( void );
+static void vScheduleTasks( void );
 /*
  * Only the comprehensive demo uses application hook (callback) functions.  See
  * http://www.freertos.org/a00016.html for more information.
@@ -158,6 +160,11 @@ int main( void )
     {
         console_print("Starting Simple task Scheduler\n");
         simple_task_sched();
+    }
+    #elif ( mainSELECTED_APPLICATION == EDF_TASK_SCHED)
+    {
+        console_print("Starting EDF task Scheduler\n");
+        vScheduleTasks();
     }
     #else
     {
