@@ -7,7 +7,7 @@ public class HelloImpl implements Hello {
 
         // JDBC driver name and database URL 
         String JDBC_DRIVER = "com.mysql.jdbc.Driver";   
-        String DB_URL = "jdbc:mysql://localhost:3306/65G";  
+        String DB_URL = "jdbc:mariadb://localhost:3306/details?useSSL=false";  
         String USER = "root"; 
         String PASS = "1234";  
 
@@ -16,7 +16,7 @@ public class HelloImpl implements Hello {
         List<Student> list = new ArrayList<Student>(); 
         try{
             //Register JDBC driver , mariadb is a dropin open source replacement for mysql.
-            Class.forName("com.mysql.jdbc.Driver");   
+            Class.forName("org.mariadb.jdbc.Driver");   
 
             System.out.println("Connecting to a selected database..."); 
             conn = DriverManager.getConnection(DB_URL, USER, PASS); 
